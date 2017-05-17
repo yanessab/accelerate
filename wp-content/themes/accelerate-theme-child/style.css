@@ -18,6 +18,11 @@
     background: none repeat scroll 0 0 #45ac9d;
 }
 
+#masthead nav ul li {
+  float:left;
+  margin: 0 10px;
+}
+
 /*END GLOBAL styles */
 
 
@@ -57,3 +62,26 @@
 	text-transform: uppercase;
 }
 /* END HOMEPAGE Styles */
+
+/* Case Studies */
+
+article.case-study {
+  margin: 40px 0 0;
+}
+
+aside.case-study-sidebar {
+  float: left;
+  width: 314px;
+  margin: 0 40px 0 0;
+}
+
+div.case-study-images {
+  float: left;
+  width: 606px;
+}
+
+div.case-study-images img {
+  display: block;
+  margin-bottom: 50px;
+  border: 1px solid #ddd;
+}
