@@ -31,10 +31,10 @@ get_header(); ?>
 
 	<section class="featured-work">
 		<div class="site-content">
-			<h4>Featured Work</h4>
+			<h6>Featured Work</h6>
 
 			<ul class="homepage-featured-work">
-				<?php query_posts('posts_per_page=3&post_type=case_studies'); ?>
+				<?php query_posts('posts_per_page=3&post_type=case_studies&order=ASC');	?>
 					<?php while ( have_posts() ) : the_post();
 						$image_1 = get_field ('image_1');
 						$size = "medium";
@@ -44,7 +44,7 @@ get_header(); ?>
 							<?php echo wp_get_attachment_image($image_1, $size); ?>
 						</figure>
 							<!-- loop content here -->
-							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							<h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
 					</li>
 
 					<?php endwhile; ?>

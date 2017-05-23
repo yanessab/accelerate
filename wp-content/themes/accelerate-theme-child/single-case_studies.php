@@ -50,6 +50,11 @@ get_header(); ?>
           </div> <!-- case study sidebar images -->
 
         </article>
+
+				<footer class="navigation container">
+					<div class="left">&larr;<a href="<?php echo home_url(); ?>/case-studies">Back to Work</a></div>
+				</footer>
+
 			<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
