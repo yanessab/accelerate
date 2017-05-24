@@ -27,18 +27,34 @@
 
 //Custom post types function
 
- function create_custom_post_types() {
-//create a case study custom post type
-     register_post_type( 'case_studies',
-         array(
-             'labels' => array(
-                 'name' => __( 'Case Studies' ),
-                 'singular_name' => __( 'Case Study' )
-             ),
-             'public' => true,
-             'has_archive' => true,
-             'rewrite' => array( 'slug' => 'case-studies' ),
-         )
-     );
+function create_custom_post_types() {
+ //create a case study custom post type
+      register_post_type( 'case_studies',
+          array(
+              'labels' => array(
+                  'name' => __( 'Case Studies' ),
+                  'singular_name' => __( 'Case Study' )
+              ),
+              'public' => true,
+              'has_archive' => true,
+              'rewrite' => array( 'slug' => 'case-studies' ),
+          )
+      );
+  }
+  add_action( 'init', 'create_custom_post_types' );
+
+function accelerate_child_theme_support() {
+   // image size for case studies on front-page
+   add_image_size('front-page-featured-work', 300, 200, true);
+ 	}
+ add_action( 'after_setup_theme', 'accelerate_child_theme_support' );
+
+// Reverse Case Studies Archive order
+function reverse_archive_order( $query ){
+
+ if( !is_admin() && $query->is_post_type_archive('case_studies')  && $query->is_main_query() ) {
+ $query->set('order', 'ASC');
  }
- add_action( 'init', 'create_custom_post_types' );
+}
+
+add_action( 'pre_get_posts', 'reverse_archive_order' );
