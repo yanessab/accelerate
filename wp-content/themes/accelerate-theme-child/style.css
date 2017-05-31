@@ -20,7 +20,7 @@
 
 #masthead nav ul li {
   float:left;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 #menu-top-nav {
@@ -30,6 +30,21 @@
 ul {
   margin: 0;
 }
+
+.main-color {
+  color: #45ac9d;
+}
+
+.site-footer .site-info {
+	border-top: 1px solid #e3e1e1;
+}
+
+.navigation {
+  border-top: 1px solid #e3e1e1;
+}
+
+
+
 /*END GLOBAL styles */
 
 
@@ -121,3 +136,66 @@ div.case-study-images img {
   margin-bottom: 70px;
   border: 1px solid #ddd;
 }
+
+/* CONTACT form */
+
+div#content.contact-us {
+  width: 67%;
+  margin-left: 17%;
+}
+
+div#nf-field-1-container.label-above{
+  font-size: 14px;
+}
+
+div#nf-field-2-container.label-above{
+  font-size: 14px;
+}
+
+div#nf-field-3-container.label-above{
+  font-size: 14px;
+}
+
+div#nf-field-4-wrap.submit-wrap {
+  float: right;
+}
+
+input#nf-field-4.button {
+  font-size: 18px;
+  width: 205px;
+  height: 60px;
+}
+
+/* END CONTACT form */
+
+
+/* ABOUT PAGE */
+
+.about-page {
+    background: url("img/taxi-photo.jpg") no-repeat scroll bottom center / cover rgba(0, 0, 0, 0);
+    height: 303px;
+    margin: 0;
+    padding: 85px 0 0 0;
+}
+
+.about-page-hero h2 {
+  align-items: center;
+  text-align: center;
+  font-size: 1.6em;
+  line-height: 1.7em;
+	color: white;
+  font-weight: 300;
+  padding-top: 0;
+  margin-top: 0;
+
+}
+
+.about-services h6 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about-services p {
+  text-align: center;
+}
+/* END ABOUT PAGE */
