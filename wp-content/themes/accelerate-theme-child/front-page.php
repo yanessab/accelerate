@@ -55,23 +55,55 @@ get_header(); ?>
 
 	</section> <!-- featured-work -->
 
+	<section class="our-services-frontpage">
+		<h6>Our Services</h6>
+		<ul class="frontpage-services">
+			<?php query_posts('posts_per_page=4&post_type=about_services');	?>
+			<?php while ( have_posts() ) : the_post();
+				$icon = get_field ('icon');
+				$size = "full";
+			?>
+			<li class="individual-services">
+				<figure>
+					<?php echo wp_get_attachment_image($icon, $size); ?>
+				</figure>
+					<!-- loop content here -->
+					<h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+			</li>
+
+			<?php endwhile; ?>
+		</ul>
+	</section> <!-- end our services frontpage -->
 
 
-<section class="recent-posts">
-	<div class="site-content">
-		<div class="blog-post">
-			<h4>From the Blog</h4>
-				<?php query_posts('posts_per_page=1'); ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-	    			<!-- loop content here -->
-						<h2><?php the_title(); ?></h2>
-						<?php the_excerpt(); ?>
-						<a class="read-more-link" href="<?php the_permalink(); ?>">Read More <span>&rsaquo;</span></a>
+	<section class="recent-posts">
+		<div class="site-content">
+			<div class="blog-post">
+				<h4>From the Blog</h4>
+					<?php query_posts('posts_per_page=1'); ?>
+						<?php while ( have_posts() ) : the_post(); ?>
+		    			<!-- loop content here -->
+							<h2><?php the_title(); ?></h2>
+							<?php the_excerpt(); ?>
+							<a class="read-more-link" href="<?php the_permalink(); ?>">Read More <span>&rsaquo;</span></a>
 
-  				<?php endwhile; ?>
-				<?php wp_reset_query(); ?>
-	  </div>
-	</div>
-</section><!-- recent posts -->
+	  				<?php endwhile; ?>
+			</div> <!-- recent blog posts -->
+
+			<div class="recent-twitter">
+					<h4>Recent Tweet</h4>
+						<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+							<div id="secondary" class="widget-area" role="complementary">
+								<?php dynamic_sidebar( 'sidebar-2' ); ?>
+								<a class="follow-us-link" href="https://twitter.com/iPlanetUK">Follow Us <span>&rsaquo;</span></a>
+							</div>
+						<?php endif; ?>
+					<?php wp_reset_query(); ?>
+
+			</div> <!-- recent twitter -->
+
+		</div> <!-- site content -->
+
+	</section><!-- recent posts -->
 
 <?php get_footer(); ?>

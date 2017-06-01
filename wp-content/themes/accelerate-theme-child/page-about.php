@@ -27,23 +27,34 @@ get_header(); ?>
 		<div class="site-content">
 			<h6>Our Services</h6>
 			<p>We take pride in our clients and the content we create for them.<br> Here's a brief overview of our offered services.</p>
-			<ul class="featured-about-services">
-				<?php query_posts('posts_per_page=4&post_type=about_services');	?>
-					<?php while ( have_posts() ) : the_post();
-						$image_1 = get_field ('image_1');
-						$size = "front-page-featured-work";
-					?>
-					<li class="individual-featured-work">
-						<figure>
-							<?php echo wp_get_attachment_image($image_1, $size); ?>
-						</figure>
-							<!-- loop content here -->
-							<h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
-					</li>
 
-					<?php endwhile; ?>
-				<?php wp_reset_query(); ?>
-			</ul>
+			<?php while ( have_posts() ) : the_post();
+        $size = "full";
+        $icon = get_field ('icon');
+        $about_service = get_field ('about_service');
+				$service_description = get_field ('service_description');
+      ?>
+
+			<article class="about-services">
+				<div class="about-service-img">
+
+					<?php if ($icon) { ?>
+						<?php echo wp_get_attachment_image( $icon, $size ); ?>
+					<?php } ?>
+
+
+				</div> <!-- about services img sidebar -->
+
+				<aside class="about-services-text">
+					<h2><?php echo $about_service; ?></h2>
+
+					<h5><?php echo $service_description; ?></h5>
+
+				</aside> <!-- about services text end -->
+
+			</article>
+
+			<?php endwhile; // end of the loop. ?>
 
 		</div> <!-- site-content -->
 

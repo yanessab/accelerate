@@ -43,8 +43,6 @@ ul {
   border-top: 1px solid #e3e1e1;
 }
 
-
-
 /*END GLOBAL styles */
 
 
@@ -57,31 +55,6 @@ ul {
 
 .button {
     background: none repeat scroll 0 0 #45ac9d;
-}
-
-.blog-post {
-	width: 50%;
-}
-
-.blog-post h4 {
-	font-size: 16px;
-	font-family: 'Montserrat';
-	color: #a6a6a6;
-	text-transform: uppercase;
-}
-
-.blog-post h2 {
-	font-size: 24px;
-	font-family: 'Montserrat';
-	font-weight: bold;
-}
-
-.blog-post .read-more-link {
-	font-size: 16px;
-	font-family: 'Montserrat';
-	font-weight: bold;
-	color: #45ac9d;
-	text-transform: uppercase;
 }
 
 .featured-work h6 {
@@ -109,6 +82,82 @@ li.individual-featured-work:nth-child(3n) {
   font-weight: bold;
   text-transform: none;
 }
+
+.our-services-frontpage h6 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+div.blog-post {
+	width: 45%;
+  float: left;
+}
+
+.blog-post h4 {
+	font-size: 16px;
+	font-family: 'Montserrat';
+	color: #a6a6a6;
+	text-transform: uppercase;
+}
+
+.blog-post h2 {
+	font-size: 24px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+}
+
+.blog-post .read-more-link {
+	font-size: 16px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+	color: #45ac9d;
+	text-transform: uppercase;
+}
+
+.recent-twitter {
+  width: 45%;
+  margin-left: 10%;
+  float: left;
+  clear: none;
+}
+
+.recent-twitter h4 {
+	font-size: 16px;
+	font-family: 'Montserrat';
+	color: #a6a6a6;
+	text-transform: uppercase;
+}
+
+h3.widget-title {
+  font-size: 24px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+  line-height: 1;
+  margin: 36px 0 12px;
+}
+
+.recent-twitter .follow-us-link {
+	font-size: 16px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+	color: #45ac9d;
+	text-transform: uppercase;
+}
+
+#pi_simpletwittertweets-2 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+ul.tweets li {
+  list-style: none;
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+
 
 /* END HOMEPAGE Styles */
 
@@ -198,4 +247,6 @@ input#nf-field-4.button {
 .about-services p {
   text-align: center;
 }
+
+
 /* END ABOUT PAGE */
