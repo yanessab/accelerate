@@ -41,6 +41,20 @@ function create_custom_post_types() {
               'rewrite' => array( 'slug' => 'case-studies' ),
           )
       );
+
+//create an about service custom post type
+      register_post_type( 'about_services',
+          array(
+              'labels' => array(
+                  'name' => __( 'Services' ),
+                  'singular_name' => __( 'Service' )
+              ),
+              'public' => true,
+              'menu_icon' => 'dashicons-universal-access',
+              'has_archive' => false,
+              'rewrite' => array( 'slug' => 'about-services' ),
+          )
+      );
   }
   add_action( 'init', 'create_custom_post_types' );
 
@@ -63,7 +77,7 @@ function reverse_archive_order( $query ){
 
 add_action( 'pre_get_posts', 'reverse_archive_order' );
 
-//about page custom post type
+/*about page custom post type
 function about_services_init() {
     $args = array(
       'label' => 'About Services',
@@ -77,18 +91,13 @@ function about_services_init() {
         'supports' => array(
             'title',
             'editor',
-            'excerpt',
-            'trackbacks',
-            'custom-fields',
-            'comments',
-            'revisions',
             'thumbnail',
-            'author',
             'page-attributes',)
         );
     register_post_type( 'about-services', $args );
 }
 add_action( 'init', 'about_services_init' );
+*/
 
 // Remove 'Accelerate' in the description - call in footer.php ONLY
 function green_accelerate_footer(){

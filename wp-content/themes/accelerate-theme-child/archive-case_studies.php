@@ -39,7 +39,7 @@ get_header(); ?>
 
         </div> <!-- case study sidebar images -->
 
-      </article>
+      </article> <!-- end case study -->
 
 			<?php endwhile; // end of the loop. ?>
 

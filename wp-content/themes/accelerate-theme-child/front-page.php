@@ -55,8 +55,8 @@ get_header(); ?>
 
 	</section> <!-- featured-work -->
 
-	<section class="our-services-frontpage">
-		<h6>Our Services</h6>
+	<section class="our-services">
+		<h6 class="our-services-frontpage">Our Services</h6>
 		<ul class="frontpage-services">
 			<?php query_posts('posts_per_page=4&post_type=about_services');	?>
 			<?php while ( have_posts() ) : the_post();
