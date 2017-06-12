@@ -71,7 +71,7 @@ ul.homepage-featured-work {
 
 li.individual-featured-work {
   display: inline-block;
-  margin-right: 25px;
+  margin-right: 5.6%;
   margin-bottom: 25px;
 }
 
@@ -97,19 +97,14 @@ h6.our-services-frontpage {
   text-transform: uppercase;
 }
 
-.frontpage-services {
-  width: 70%;
-  margin-left: 15%;
-}
-
 li.individual-services {
   display: inline-block;
-  margin-right: 3%;
+  margin-right: 2.8%;
   margin-bottom: 80px;
 }
 
 li.individual-services:nth-child(4n) {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 li.individual-services h6{
@@ -195,7 +190,7 @@ ul.tweets li {
 
 
 
-/* Case Studies */
+/* Case Studies (WORK page) */
 
 article.case-study {
   margin: 40px 0;
@@ -254,6 +249,8 @@ input#nf-field-4.button {
 
 /* ABOUT PAGE */
 
+/* top hero area about page */
+
 .about-page {
   background: url("img/taxi-photo.jpg") no-repeat scroll bottom center / cover rgba(0, 0, 0, 0);
   height: 303px;
@@ -272,6 +269,8 @@ input#nf-field-4.button {
   margin-top: 0;
 
 }
+
+/* our services about page area */
 
 .services-about-page h6 {
   text-align: center;
@@ -310,13 +309,19 @@ article .about-services {
   margin-bottom: 85px;
 }
 
+.about-services:nth-child(even) .about-service-img {
+    float: right;
+}
+
+/* call to action about page */
+
 #services-about-footer.work-with-us-footer {
-  margin-left: 15%;
+
   border-top: 1px solid #e3e1e1;
-  /* margin-top: 1250px; */
 }
 
 .work-with-us-footer h3 {
+  margin-left: 15%;
   float: left;
   clear: both;
   padding-top: 40px;
@@ -337,3 +342,132 @@ article .about-services {
 }
 
 /* END ABOUT PAGE */
+
+
+/* BLOG PAGE */
+
+
+/* SIDEBAR styles */
+
+#sidebar {
+  width: 31%;
+	padding-top: 20px;
+}
+#sidebar li {
+	list-style-type: none;
+}
+#sidebar p {
+	font: 14px/28px 'Open Sans';
+	margin-bottom: 20px;
+}
+#sidebar .widget {
+	padding: 28px 31px;
+}
+#sidebar .widget_text {
+	border-bottom: 1px solid #BFBFBF;
+}
+#sidebar .widget_text img {
+	max-width: 175px;
+	margin: auto;
+	display: block;
+
+}
+#sidebar .widget_text a {
+	color: #3b3b3b;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+#sidebar .widget_search {
+	border-bottom: 1px solid #BFBFBF;
+}
+#sidebar .widget_search input[type="text"] {
+	border-top: 1px solid #a6a6a6;
+	border-bottom: 1px solid #a6a6a6;
+	border-left: 1px solid #a6a6a6;
+	border-right: none;
+	width: 200px;
+	height: 36px;
+	padding: 8px;
+	vertical-align: middle;
+}
+#sidebar .widget_search input[type="submit"] {
+	border-top: 1px solid #a6a6a6;
+	border-bottom: 1px solid #a6a6a6;
+	border-right: 1px solid #a6a6a6;
+	border-left: none;
+	width: 35px;
+	height: 36px;
+	background: url('img/white-arrow-right.png') no-repeat 13px 10px #45ac9d;
+	color: #ffffff;
+	margin-left: -5px;
+	vertical-align: middle;
+}
+
+#sidebar .widget-title {
+	font: 16px 'Open Sans';
+	color: #3b3b3b;
+	text-align: center;
+}
+
+#sidebar h3 {
+	text-align: center;
+	color: #45ac9d;
+	margin-bottom: 20px;
+}
+
+#sidebar h3 a:link {
+	color: #45ac9d;
+}
+
+#sidebar h3 a:hover {
+	color: #45ac9d;
+}
+
+#sidebar .widget_categories {
+	padding: 28px 31px 0 31px;
+}
+#sidebar .widget_categories h2,
+#sidebar .widget_archive h2,
+#sidebar .popular-posts h2 {
+	font: 600 14px 'Open Sans';
+	color: #45ac9d;
+	margin-bottom: 20px;
+}
+#sidebar .widget_categories ul li,
+#sidebar .widget_archive ul li,
+#sidebar .wpp-list li {
+	font: 14px 'Open Sans';
+	color: #3b3b3b;
+	text-align: center;
+	margin-bottom: 15px;
+}
+#sidebar .widget_categories ul li a,
+#sidebar .widget_archive ul li a {
+	color: #3b3b3b;
+}
+
+#sidebar .widget_categories ul li a:link,
+#sidebar .widget_archive ul li a:link,
+#sidebar .wpp-list li a:link {
+	color: #3b3b3b;
+	font-size: 14px;
+}
+
+#sidebar .widget_categories ul li a:visited,
+#sidebar .widget_archive ul li a:visited,
+#sidebar .wpp-list li a:visited   {
+	color: #45ac9d;
+}
+
+#sidebar .widget_categories ul li a:hover,
+#sidebar .widget_archive ul li a:hover,
+#sidebar .wpp-list li a:hover {
+	color: #45ac9d;
+}
+
+#sidebar .widget_categories ul li a:active,
+#sidebar .widget_archive ul li a:active,
+#sidebar .wpp-list li a:active {
+	color: #45ac9d;
+}

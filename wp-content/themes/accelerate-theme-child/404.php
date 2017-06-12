@@ -15,7 +15,7 @@ get_header(); ?>
 
         <div class="page-404">
 
-					<img src="img/map.png" alt="map">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/map.png"/>
 					<div class="sidebar-404">
 		        <h2>WHOOOPS, Took a wrong Turn...</h2>
 						<p>Sorry, this page no longer exists, has never existed or has been moved. We feel like complete jerks for totally misleading you.</p>

@@ -28,32 +28,34 @@ get_header(); ?>
 			<h6>Our Services</h6>
 			<p>We take pride in our clients and the content we create for them.<br> Here's a brief overview of our offered services.</p>
 
-			<?php query_posts('posts_per_page=4&post_type=about_services');	?>
-			<?php while ( have_posts() ) : the_post();
-        $size = "full";
-        $icon = get_field ('icon');
-        $about_service = get_field ('about_service');
-      ?>
+			<div class="clearfix">
+				<?php query_posts('posts_per_page=4&post_type=about_services');	?>
+				<?php while ( have_posts() ) : the_post();
+	        $size = "full";
+	        $icon = get_field ('icon');
+	        $about_service = get_field ('about_service');
+	      ?>
 
-			<article class="about-services">
-				<div class="about-service-img">
+				<article class="about-services">
+					<div class="about-service-img">
 
-					<?php if ($icon) { ?>
-						<?php echo wp_get_attachment_image( $icon, $size ); ?>
-					<?php } ?>
+						<?php if ($icon) { ?>
+							<?php echo wp_get_attachment_image( $icon, $size ); ?>
+						<?php } ?>
 
-				</div> <!-- about services img sidebar -->
+					</div> <!-- about services img sidebar -->
 
-				<aside class="about-services-text">
-					<h2><?php echo $about_service; ?></h2>
+					<aside class="about-services-text">
+						<h2><?php echo $about_service; ?></h2>
 
-					<?php the_excerpt(); ?>
+						<?php the_excerpt(); ?>
 
-				</aside> <!-- about services text end -->
+					</aside> <!-- about services text end -->
 
-			</article> <!-- about services end -->
+				</article> <!-- about services end -->
 
-			<?php endwhile; // end of the loop. ?>
+				<?php endwhile; // end of the loop. ?>
+			</div>
 
 			<div id="services-about-footer" class="work-with-us-footer">
 				<h3>Interested in working with us?</h3>

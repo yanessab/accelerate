@@ -59,13 +59,28 @@ function create_custom_post_types() {
   add_action( 'init', 'create_custom_post_types' );
 
 function accelerate_child_theme_support() {
+
+  // Post thumbnails support
+  add_theme_support('post-thumbnails');
+
+  // Let WordPress take care of outputting the title
+	add_theme_support( 'title-tag' );
+
+  // but change the separator from '-' to '|'
+	function accelerate_child_custom_title_separator($sep) {
+		$sep = '|';
+		return $sep;
+	}
+
+	add_filter('document_title_separator', 'accelerate_child_custom_title_separator');
+
    // image size for case studies on front-page
    add_image_size('front-page-featured-work', 300, 200, true);
- 	}
- add_action( 'after_setup_theme', 'accelerate_child_theme_support' );
 
- // Let WordPress take care of outputting the title
- add_theme_support( 'title-tag' );
+ 	}
+
+  add_action( 'after_setup_theme', 'accelerate_child_theme_support' );
+
 
 // Reverse Case Studies Archive order
 function reverse_archive_order( $query ){

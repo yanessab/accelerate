@@ -56,27 +56,29 @@ get_header(); ?>
 	</section> <!-- featured-work -->
 
 	<section class="our-services">
-		<h6 class="our-services-frontpage">Our Services</h6>
-		<ul class="frontpage-services">
-			<?php query_posts('posts_per_page=4&post_type=about_services');	?>
-			<?php while ( have_posts() ) : the_post();
-				$icon = get_field ('icon');
-				$size = "full";
-			?>
-			<li class="individual-services">
-				<figure>
-					<?php echo wp_get_attachment_image($icon, $size); ?>
-				</figure>
-					<!-- loop content here -->
-					<h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
-			</li>
+		<div class="site-content">
+			<h6 class="our-services-frontpage">Our Services</h6>
+			<ul class="frontpage-services">
+				<?php query_posts('posts_per_page=4&post_type=about_services');	?>
+				<?php while ( have_posts() ) : the_post();
+					$icon = get_field ('icon');
+					$size = "full";
+				?>
+				<li class="individual-services">
+					<figure>
+						<?php echo wp_get_attachment_image($icon, $size); ?>
+					</figure>
+						<!-- loop content here -->
+						<h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+				</li>
 
-			<?php endwhile; ?>
-		</ul>
+				<?php endwhile; ?>
+			</ul>
+		</div>
 	</section> <!-- end our services frontpage -->
 
 
-	<section class="recent-posts">
+	<section class="recent-posts clearfix">
 		<div class="site-content">
 			<div class="blog-post">
 				<h4>From the Blog</h4>
