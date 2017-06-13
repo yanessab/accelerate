@@ -66,21 +66,38 @@ function accelerate_child_theme_support() {
   // Let WordPress take care of outputting the title
 	add_theme_support( 'title-tag' );
 
-  // but change the separator from '-' to '|'
-	function accelerate_child_custom_title_separator($sep) {
-		$sep = '|';
-		return $sep;
-	}
-
-	add_filter('document_title_separator', 'accelerate_child_custom_title_separator');
-
-   // image size for case studies on front-page
-   add_image_size('front-page-featured-work', 300, 200, true);
+  // image size for case studies on front-page
+  add_image_size('front-page-featured-work', 300, 200, true);
 
  	}
 
   add_action( 'after_setup_theme', 'accelerate_child_theme_support' );
 
+// but change the separator from '-' to '|'
+	function accelerate_child_custom_title_separator($sep) {
+		$sep = '|';
+		return $sep;
+	}
+
+  add_filter('document_title_separator', 'accelerate_child_custom_title_separator');
+
+  /* Create custom title for site */
+  function accelerate_child_custom_title($title) {
+      // 'Accelerate' only for front page
+  	if ( is_front_page()) {
+  		$title = get_bloginfo('name');
+  		return $title;
+  	}
+      // WORK | Accelerate for case studies page
+  	if ( is_post_type_archive( 'case_studies' ) ) {
+  		$work_title = "WORK";
+  		$site_title = get_bloginfo('name');
+  		$sep = " | ";
+  		$title = $work_title . $sep . $site_title;
+  		return $title;
+  	}
+  }
+  add_filter( 'pre_get_document_title', 'accelerate_child_custom_title', 10 );  
 
 // Reverse Case Studies Archive order
 function reverse_archive_order( $query ){
@@ -148,3 +165,9 @@ function accelerate_theme_child_widget_init() {
 
 }
 add_action( 'widgets_init', 'accelerate_theme_child_widget_init' );
+
+// changes excerpt symbol
+function custom_excerpt_more($more) {
+	return '...';
+}
+add_filter('excerpt_more', 'custom_excerpt_more');

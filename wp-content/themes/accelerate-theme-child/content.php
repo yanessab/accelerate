@@ -1,6 +1,9 @@
+
+<!-- BLOG PAGE -->
 <section class="blog-page">
 	<div class="site-content">
 		<div class="main-content">
+
 
 			<article id="post-<?php the_ID(); ?>" class="post-entry">
 				<div class="entry-wrap">
@@ -9,13 +12,7 @@
 						<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 					</header>
 					<div class="entry-summary">
-						<figure>
-						  <?php if ( has_post_thumbnail() ) : ?>
-						    <?php the_post_thumbnail('full'); ?>
-						  <?php endif; ?>
-						</figure>
-						<?php the_excerpt() ?>
-						<a href="<?php the_permalink() ?>" class="read-more">Read More <span>»<span></a>
+						<?php the_content(); ?>
 					</div>
 					<footer class="entry-footer">
 						<div class="entry-meta">

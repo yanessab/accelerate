@@ -13,9 +13,9 @@ get_header(); ?>
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 
-        <div class="page-404">
+        <div class="page-404 clearfix">
 
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/map.png"/>
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/map.png" class="map-404"/>
 					<div class="sidebar-404">
 		        <h2>WHOOOPS, Took a wrong Turn...</h2>
 						<p>Sorry, this page no longer exists, has never existed or has been moved. We feel like complete jerks for totally misleading you.</p>

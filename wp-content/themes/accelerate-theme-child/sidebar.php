@@ -20,4 +20,4 @@
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	</div><!-- #primary-sidebar -->
 	<?php endif; ?>
-</div><!-- #secondary -->
+</div><!-- #sidebar -->
