@@ -655,8 +655,16 @@ div.sidebar-404 {
 
 div.sidebar-404 h2 {
   color: #45ac9d;
-
 }
 
+a.blog-link {
+  color: #45ac9d;
+  font-weight: bold;
+}
+
+a.work-link {
+  color: #45ac9d;
+  font-weight: bold;
+}
 
 /* END 404 PAGE */

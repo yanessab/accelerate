@@ -19,7 +19,7 @@ get_header(); ?>
 					<div class="sidebar-404">
 		        <h2>WHOOOPS, Took a wrong Turn...</h2>
 						<p>Sorry, this page no longer exists, has never existed or has been moved. We feel like complete jerks for totally misleading you.</p>
-						<p>Feel free to take a look around our blog or some of our featured work.</p>
+						<p>Feel free to take a look around our <a href="http://localhost:8888/accelerate/blog/" class="blog-link">blog</a> or some of our <a href="http://localhost:8888/accelerate/blog/" class="work-link">featured work</a>.</p>
 					</div>
 				</div>
 
