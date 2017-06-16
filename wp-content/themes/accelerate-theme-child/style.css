@@ -337,7 +337,7 @@ input#nf-field-4.button {
   text-align: center;
   font-size: 1.6em;
   line-height: 1.7em;
-	color: white;
+	color: #ffffff;
   font-weight: 300;
   padding-top: 0;
   margin-top: 0;
@@ -404,7 +404,7 @@ article .about-services {
 
 .contact-button {
     background: none repeat scroll 0 0 #45ac9d;
-    color: white;
+    color: #ffffff;
     font-family: "montserrat";
     font-size: 20px;
     font-weight: bold;
