@@ -22,7 +22,36 @@
 				</div>
 
 			<nav class="social-media-navigation" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'social-media', 'menu_class' => 'social-media-menu' ) ); ?>
+
+					<?php wp_nav_menu( array( 'theme_location' => 'social-media', 'menu_class' => 'social-media-menu' ) ); ?>
+
+				<!-- <ul class="social-btns">
+
+					<li>
+						<a href="https://www.linkedin.com/in/yanessaa/" class="soc-icon ln">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-linkedin fa-stack-1x fa-inverse" aria-hidden="true" ></i>
+						</span></a>
+					</li>
+
+					<li>
+						<a href="https://www.facebook.com/yanessaalvarezbowser" class="soc-icon fb">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-facebook fa-stack-1x fa-inverse" aria-hidden="true" ></i></a>
+						</span></a>
+					</li>
+
+					<li>
+						<a href="https://www.twitter.com/yanessa/" class="soc-icon in">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-twitter fa-stack-1x fa-inverse" aria-hidden="true" ></i>
+						</span></a>
+					</li>
+
+				</ul> -->
 			</nav>
 
 

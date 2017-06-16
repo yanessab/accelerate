@@ -17,7 +17,7 @@
 get_header(); ?>
 
 	<!-- BLOG PAGE -->
-	<section class="blog-page">
+	<section class="blog-page index-page">
 		<div class="site-content">
 			<div class="main-content">
 
@@ -33,9 +33,6 @@ get_header(); ?>
 		</div>
 
 		<?php get_sidebar(); ?>
-
-		<div class="clearfix"></div>
-
 		<?php if ( have_posts() ): ?>
 		<div id="navigation" class="container">
 				<div class="left"><?php next_posts_link('&larr; <span>Older Posts</span>'); ?></div>

@@ -1,6 +1,3 @@
-<section class="blog-page">
-	<div class="site-content">
-		<div class="main-content">
 
 			<article id="post-<?php the_ID(); ?>" class="post-entry">
 				<div class="entry-wrap">
@@ -29,7 +26,3 @@
 					</footer>
 				</div>
 			</article>
-
-		</div>
-	</div>
-</section>

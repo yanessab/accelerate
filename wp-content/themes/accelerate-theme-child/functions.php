@@ -97,7 +97,7 @@ function accelerate_child_theme_support() {
   		return $title;
   	}
   }
-  add_filter( 'pre_get_document_title', 'accelerate_child_custom_title', 10 );  
+  add_filter( 'pre_get_document_title', 'accelerate_child_custom_title', 10 );
 
 // Reverse Case Studies Archive order
 function reverse_archive_order( $query ){
@@ -142,14 +142,6 @@ function green_accelerate_footer(){
 };
 
 add_filter( 'body_class','accelerate_body_classes' );
-function accelerate_body_classes( $classes ) {
-
-  if (is_page('contact') ) {
-    $classes[] = 'contact';
-  }
-
-    return $classes;
-}
 
 function accelerate_theme_child_widget_init() {
 
@@ -165,6 +157,15 @@ function accelerate_theme_child_widget_init() {
 
 }
 add_action( 'widgets_init', 'accelerate_theme_child_widget_init' );
+
+function accelerate_body_classes( $classes ) {
+
+  if (is_page('contact') ) {
+    $classes[] = 'contact';
+  }
+
+    return $classes;
+}
 
 // changes excerpt symbol
 function custom_excerpt_more($more) {
