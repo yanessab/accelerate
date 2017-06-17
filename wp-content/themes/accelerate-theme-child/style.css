@@ -289,6 +289,11 @@ div.case-study-images img {
   border: 1px solid #ddd;
 }
 
+.navigation {
+  overflow: visible;
+  border-top: 1px solid #e3e1e1;
+}
+
 /* CONTACT form */
 
 div#content.contact-us {
@@ -364,7 +369,7 @@ article .about-services {
 
 .about-services-text {
   margin-left: 6%;
-  width: 65%;
+  width: 59%;
   float: left;
 }
 
@@ -395,7 +400,7 @@ article .about-services {
 }
 
 .work-with-us-footer h3 {
-  margin-left: 15%;
+  margin-left: 14%;
   float: left;
   clear: both;
   padding-top: 40px;
@@ -415,12 +420,14 @@ article .about-services {
     margin: 45px;
 }
 
+a.contact-button {
+  color: white;
+}
 
 /* END ABOUT PAGE */
 
 
 /* BLOG PAGE */
-
 
 
     /* next / prev  */
